@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "270632047949",
+    "project_id": "chatflutter-88aef",
+    "storage_bucket": "chatflutter-88aef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270632047949:android:6293cb85ad7cf74e7c9304",
+        "android_client_info": {
+          "package_name": "lademir.com.br.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270632047949-r5umlo9jfs2pq32g7s9ofpt6v6hb8i89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "lademir.com.br.chat",
+            "certificate_hash": "3e5911e795e304302e8db94da47da5cf93fb5413"
+          }
+        },
+        {
+          "client_id": "270632047949-nlsh7b5pqt37ajhal8o8no6pmfcroh1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj-w4cQDqXAZgnXSJWtI6dc5dN4QdgVXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270632047949-nlsh7b5pqt37ajhal8o8no6pmfcroh1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
