@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
         Scaffold(
           body: HomeTab(),
           drawer: CustomDrawer(_pageController),
+          drawerEnableOpenDragGesture: true,
           floatingActionButton: CartButton(),
         ),
         Scaffold(
@@ -26,10 +27,18 @@ class HomeScreen extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: CustomDrawer(_pageController),
+          drawerEnableOpenDragGesture: true,
           body: ProductsTab(),
           floatingActionButton: CartButton(),
         ),
-        Container(color: Colors.yellow,),
+        Scaffold(
+          appBar: AppBar(
+            title: Text("Meus Pedidos"),
+            centerTitle: true,
+          ),
+          body: OrdersTab(),
+          drawer: CustomDrawer(_pageController),
+        ),
         Container(color: Colors.green,)
       ],
     );

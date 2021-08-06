@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:loja_virtual/models/cart_model.dart';
+import 'package:loja_virtual/screens/category_screen.dart';
 import 'package:loja_virtual/screens/home_screen.dart';
 import 'package:loja_virtual/screens/login_screen.dart';
+import 'package:loja_virtual/screens/order_screen.dart';
 import 'package:loja_virtual/screens/product_screen.dart';
 import 'package:loja_virtual/tiles/cart_tile.dart';
+import 'package:loja_virtual/widgets/cart_price.dart';
+import 'package:loja_virtual/widgets/discout_card.dart';
+import 'package:loja_virtual/widgets/ship_card.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:loja_virtual/models/user_model.dart';
 
@@ -97,15 +102,13 @@ class CartScreen extends StatelessWidget {
                     ),
                   ),
                   RaisedButton(
-                    child: Text("Volte aos produtos!",
+                    child: Text("Volte a tela inicial",
                       style: TextStyle(fontSize: 18.0,),
                     ),
                     textColor: Colors.white,
                     color: Theme.of(context).primaryColor,
                     onPressed: (){
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => HomeScreen())
-                      );
+                      Navigator.of(context).pop();
                     },
                   )
                 ],
@@ -122,7 +125,16 @@ class CartScreen extends StatelessWidget {
                         return CartTile(product);
                       }
                     ).toList(),
-                )
+                ),
+                DiscountCard(),
+                ShipCard(),
+                CartPrice(() async {
+                  String orderID = await model.finishOrder();
+                  if(orderID != null)
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => OrderScreen(orderID))
+                    );
+                }),
               ],
             );
           }
