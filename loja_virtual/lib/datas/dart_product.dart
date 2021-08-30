@@ -6,6 +6,7 @@
 //VAI ARMAZENAR DADOS QUE NAO VAO MUDAR
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:loja_virtual/datas/product_data.dart';
+import '';
 
 class CartProduct {
   //ID DO PRODUTO
@@ -41,7 +42,7 @@ class CartProduct {
       "quantity": quantity,
       "size": size,
       //UM RESUMO DO PRODUTO NO CARRINHO
-      //"product": productData.toResumedMap(),
+      "product": productData.toResumedMap(),
 
     };
   }
